@@ -10,6 +10,5 @@ tsorted = t
 table.sort(tsorted)
 persh = tsorted[1]
 for i,v in ipairs(t)
---print(table.concat(t," "))
 print(sum)
 
