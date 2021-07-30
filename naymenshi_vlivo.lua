@@ -6,7 +6,6 @@ for digit in string.gmatch(end1, "[-+]?%d+") do
   d = tonumber(digit)
   table.insert(t,d)
 end
-
 table.sort(tsorted)
 nayb = tsorted[#tsorted]
 
