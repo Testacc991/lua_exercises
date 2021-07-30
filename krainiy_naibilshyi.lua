@@ -11,12 +11,25 @@ for digit in string.gmatch(end1, "[-+]?%d+") do
   table.insert(tsorted,d)
 end
 table.sort(tsorted)
-persh = tsorted[1]
+nayb = tsorted[#tsorted]
+c = 0
+for i,v in ipairs(tsorted) do
+    if v == nayb then
+      c=c+1
+    end
+end
+--print(c)
+c2 = 0
 for i,v in ipairs(t)do
-if v == persh then
-  t[i] = t[1]
-  t[1] = persh
+   if v == nayb then
+     c2=c2+1
+   end
+   if v==nayb and c==c2 then
+     t[i] = t[#t]
+     t[#t] = nayb
+   end
+   
 end
-end
+--print(nayb)
 print(table.concat(t," "))
 
